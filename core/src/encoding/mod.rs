@@ -1,6 +1,7 @@
 //! Encoding and serialization utilities
 
 /// Encoding errors
+#[derive(Debug)]
 pub struct Encoder;
 
 impl Encoder {
@@ -20,6 +21,7 @@ impl Encoder {
 }
 
 /// Decoding utilities
+#[derive(Debug)]
 pub struct Decoder;
 
 impl Decoder {

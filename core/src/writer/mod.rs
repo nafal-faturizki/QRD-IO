@@ -1,26 +1,22 @@
-//! Writer for columnar data
+//! QRD Writer - streaming columnar data writing
 
-use crate::format::Footer;
 use std::io::Write;
 
-/// QRD Writer
+/// QRD Writer for streaming columnar data
 pub struct Writer<W: Write> {
     writer: W,
-    footer: Footer,
+    // TODO: Add buffering for row groups
 }
 
 impl<W: Write> Writer<W> {
     /// Create a new writer
     pub fn new(writer: W) -> Self {
-        Self {
-            writer,
-            footer: Footer::new(crate::format::VERSION),
-        }
+        Self { writer }
     }
 
     /// Write column data
     pub fn write_column(&mut self, _data: &[u8]) -> crate::Result<()> {
-        // TODO: Implement column writing
+        // TODO: Implement column writing with row group buffering
         Ok(())
     }
 

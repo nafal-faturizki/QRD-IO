@@ -36,18 +36,23 @@
 //! ```
 
 pub mod error;
+pub mod schema;
+pub mod encryption;
 pub mod encoding;
-pub mod crypto;
+pub mod compression;
 pub mod format;
+pub mod header;
+pub mod footer;
+pub mod integrity;
+pub mod columnar;
+pub mod io;
 pub mod writer;
 pub mod reader;
-pub mod types;
-pub mod compression;
 
 pub use error::{Result, Error};
 pub use writer::Writer;
 pub use reader::Reader;
-pub use types::{Schema, ColumnType};
+pub use schema::{Schema, ColumnType};
 
 /// QRD-Core library version
 pub const VERSION: &str = env!("CARGO_PKG_VERSION");
