@@ -1,0 +1,26 @@
+[package]
+name = "qrd-cli"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "QRD-CLI - Command-line tools for QRD format"
+
+[[bin]]
+name = "qrd"
+path = "src/main.rs"
+
+[dependencies]
+qrd-core = { path = "../../core" }
+clap = { version = "4.4", features = ["derive"] }
+serde.workspace = true
+serde_json.workspace = true
+anyhow.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+
+[dev-dependencies]
+assert_cmd = "2.0"
+predicates = "3.0"
+tempfile = "3.8"

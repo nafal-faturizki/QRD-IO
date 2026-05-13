@@ -1,0 +1,21 @@
+{
+  "name": "qrd-sdk",
+  "version": "1.0.0",
+  "description": "QRD-SDK Node.js Bindings - Privacy-native columnar binary container",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "docs": "typedoc src/"
+  },
+  "keywords": ["qrd", "columnar", "encryption", "analytics"],
+  "author": "QRD Contributors",
+  "license": "BSL-1.1",
+  "devDependencies": {
+    "typescript": "^5.0",
+    "jest": "^29.0",
+    "@types/jest": "^29.0",
+    "typedoc": "^0.24"
+  }
+}

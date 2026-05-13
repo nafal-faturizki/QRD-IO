@@ -1,0 +1,21 @@
+[package]
+name = "qrd-fuzz"
+version = "0.0.1"
+edition = "2021"
+publish = false
+
+[dependencies]
+qrd-core = { path = "../../core" }
+libfuzzer-sys = "0.4"
+
+[[bin]]
+name = "fuzz_parser"
+path = "fuzz_targets/parser.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "fuzz_crypto"
+path = "fuzz_targets/crypto.rs"
+test = false
+doc = false

@@ -1,0 +1,25 @@
+[package]
+name = "qrd-sdk"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+documentation.workspace = true
+description = "QRD-SDK Rust - High-level API for QRD"
+
+[dependencies]
+qrd-core = { path = "../../core" }
+serde.workspace = true
+thiserror.workspace = true
+anyhow.workspace = true
+tracing.workspace = true
+tokio = { workspace = true, optional = true }
+
+[features]
+default = ["std"]
+std = []
+async = ["tokio"]
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["full"] }

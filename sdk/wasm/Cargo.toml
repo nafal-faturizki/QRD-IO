@@ -1,0 +1,19 @@
+[package]
+name = "qrd-wasm"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "QRD-SDK WebAssembly - Browser-native QRD support"
+
+[dependencies]
+qrd-core = { path = "../../core" }
+wasm-bindgen = "0.2"
+serde.workspace = true
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3"
+
+[lib]
+crate-type = ["cdylib"]

@@ -1,0 +1,18 @@
+# Clippy linting rules for QRD-SDK
+# https://rust-lang.github.io/rust-clippy/
+
+# Maximum cognitive complexity for a function
+cognitive-complexity-threshold = 30
+
+# Enforce parentheses around all binary operators in arithmetic expressions
+arithmetic-side-effects-allowed = []
+
+# Allow doc comments without blank lines
+doc-markdown = "warn"
+
+# Enforce explicit handling of panics
+panic-safe = "warn"
+
+# Enforce zero-panic parser policy
+missing-panics-doc = "deny"
+undocumented-unsafe-blocks = "warn"

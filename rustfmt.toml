@@ -1,0 +1,38 @@
+# rustfmt configuration for QRD-SDK
+
+# Rust edition
+edition = "2021"
+
+# Formatting options
+hard_tabs = false
+tab_spaces = 4
+newline_style = "Unix"
+use_small_heuristics = "Default"
+max_width = 100
+
+# Import organization
+reorder_imports = true
+reorder_modules = true
+group_imports = "StdExternalCrate"
+
+# Spacing
+space_before_colon = false
+space_after_colon = true
+
+# Comments
+comment_width = 80
+wrap_comments = true
+normalize_comments = true
+
+# Functions
+fn_single_line = false
+force_multiline_blocks = false
+
+# Types
+match_block_trailing_comma = false
+overflow_delimited_expressions = false
+
+# Other
+edition = "2021"
+format_strings = true
+normalize_doc_attributes = true

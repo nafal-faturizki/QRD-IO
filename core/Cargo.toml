@@ -1,0 +1,43 @@
+[package]
+name = "qrd-core"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+documentation.workspace = true
+keywords.workspace = true
+categories.workspace = true
+description = "QRD-SDK Core - Privacy-native columnar binary container format"
+
+[dependencies]
+sha2.workspace = true
+hmac.workspace = true
+chacha20poly1305.workspace = true
+hkdf.workspace = true
+zeroize.workspace = true
+getrandom.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+bincode.workspace = true
+byteorder.workspace = true
+thiserror.workspace = true
+anyhow.workspace = true
+tracing.workspace = true
+bytes.workspace = true
+lz4_flex = { workspace = true, optional = true }
+zstd = { workspace = true, optional = true }
+
+[dev-dependencies]
+proptest.workspace = true
+criterion.workspace = true
+rand.workspace = true
+
+[features]
+default = []
+compression = ["lz4_flex", "zstd"]
+std = []
+
+[lib]
+name = "qrd_core"
+path = "src/lib.rs"
